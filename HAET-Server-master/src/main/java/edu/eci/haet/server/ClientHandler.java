@@ -152,7 +152,7 @@ class ClientHandler extends Thread {
         if (command.equals("exit")) {
             System.out.println(">> Disconnecting the client " + this.client + " with IP: " + ipClient);
         } else {
-            try (PrintWriter writer = new PrintWriter(command + ".txt", "UTF-8")) {
+            try (PrintWriter writer = new PrintWriter("C"+ipClient+command + ".txt", "UTF-8")) {
                 writer.println(clientResponse);
             }
         }
