@@ -48,7 +48,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
         // server is listening on port 1313 
-        ServerSocket server = new ServerSocket(1313);
+        ServerSocket server = new ServerSocket(8500);
         boolean running = false;
         
         
@@ -61,13 +61,12 @@ public class Server {
                 running = true;
             }
             int client=hilos.size();
-
+            
             Socket s = null;
-
+            
             try {
                 // socket object to receive incoming client requests
-                
-                
+               
                 s = server.accept();
                 //if(s.isConnected() && !hilos.isEmpty()){
                     //System.out.println("Actual> "+Thread.currentThread());
